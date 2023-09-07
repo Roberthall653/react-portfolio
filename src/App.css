@@ -1,3 +1,9 @@
+:root {
+  --charcoal: #33393f;
+  --offwhite: #d2e4d9;
+  --forest: #0e5c09;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,98 +16,209 @@ body {
   background-color: whitesmoke;
 }
 
-.portfolio-app {
+
+.header {
+  padding: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: var(--forest);
+  color: var(--offwhite);
+
+}
+
+/* header text formatting */
+.header h1 {
+  display: inline-block;
+  font-size: 48px;
+}
+
+/* nav link style formattting */
+.header nav {
+  padding-top: 15px;
+  margin-right: 20px;
+  float: right;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+}
+
+/* nav bar position formatting */
+.header nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.nav {
+  --bs-nav-link-padding-x: 1rem;
+  --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-font-weight: ;
+  --bs-nav-link-color: var(--bs-link-color);
+  --bs-nav-link-hover-color: var(--bs-link-hover-color);
+  --bs-nav-link-disabled-color: var(--bs-secondary-color);
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 800px;
-  min-height: 600px;
-  background: black;
-  text-align: center;
-  margin: 32px auto;
-  border-radius: 20px;
-  padding-bottom: 32px;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  justify-content: flex-end;
 }
 
-h1 {
-  margin: 32px 0;
-  color: #fff;
-  font-size: 24px;
+.nav-tabs {
+  --bs-nav-tabs-border-width: var(--bs-border-width);
+  --bs-nav-tabs-border-color: var(--bs-border-color);
+  --bs-nav-tabs-border-radius: var(--bs-border-radius);
+  --bs-nav-tabs-link-hover-border-color: var(--bs-secondary-bg) var(--bs-secondary-bg) var(--bs-border-color);
+  --bs-nav-tabs-link-active-color: var(--bs-emphasis-color);
+  --bs-nav-tabs-link-active-bg: var(--bs-body-bg);
+  --bs-nav-tabs-link-active-border-color: var(--bs-border-color) var(--bs-border-color) var(--bs-body-bg);
+  border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
 }
 
-h3 {
-  margin: auto;
-  color: rgb(66, 171, 231);
-  font-size: 20px;
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: var(--bs-nav-tabs-link-active-color);
+  background-color: var(--bs-nav-tabs-link-active-bg);
+  border-color: var(--bs-nav-tabs-link-active-border-color);
+}
+.nav-tabs .nav-link {
+  margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width));
+  border: var(--bs-nav-tabs-border-width) solid transparent;
+  border-top-left-radius: var(--bs-nav-tabs-border-radius);
+  border-top-right-radius: var(--bs-nav-tabs-border-radius);
+}
+.nav-link {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: var(--bs-nav-link-color);
+  text-decoration: none;
+  background: 0 0;
+  border: 0;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+a {
+  color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));
+  text-decoration: underline;
+}
+a {
+  color: #4183c4;
+  text-decoration: none;
+}
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
 }
 
-.icons {
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  cursor: pointer;
+img{
+  max-width: 96px;
+  max-height: 96px;
 }
 
-.delete-icon {
-  margin-right: 5px;
-  color: #fff;
-}
-
-.edit-icon {
-  color: #fff;
-}
-
-/* Dropdown menu */
-
-/* Dropdown Button */
-.dropbtn {
-  background-color: #ec5700;
-  border-radius: 4px;
-  width: 75px;
-  color: white;
-  padding: 16px;
-  margin: 10px;
-  /* font-size: 16px; */
-  border: none;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
+.content {
   display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
+.content-block {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: var(--charcoal);
+  color: #ffffff;
+}
+
+/* formatting for left side section headings */
+.content-block h2 {
+  margin: 20px;
+  margin-right: 50px;
+  font-size: 36px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.card-column {
+  flex: 1 0 100%;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  width: 75%;
+}
+
+/* formatting for project cards */
+.code-card {
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--charcoal);
+  color: var(--offwhite);
+  transition: all 0.5s ease-in-out;
+}
+
+/* formatting for borders of card images */
+.card-body {
+  flex-wrap: wrap;
+  position: relative;
+  border: 5px solid var(--forest);
+}
+
+/* formatting for making cards lose greyscale filter */
+.card-body img:hover {
+  filter: grayscale(75%);
+  transition: all 0.5s ease-in-out;
+}
+
+/* formatting for most project cards besides the first */
+.card-body img {
+  max-width: 400px;
+  min-height: 300px;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: left;
+  min-width: 100%;
+  max-height: 100%;
+  flex: 1;
+  filter: none;
+  transition: all 0.5s ease-in-out;
+  object-fit: cover;
+}
+
+
+/* formatting for text blocks over images */
+.card-body .text-block {
   position: absolute;
-  background-color: #ffffff;
-  min-width: 215px;
-  border-radius: 4px;
-  padding: 16px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  bottom: 20px;
+  width: 160px;
+  height: 50px;
+  background-color: var(--forest);
+  text-align: center;
+  font-size: 20px;
+  color: white;
 }
 
-/* Links inside the dropdown */
-.dropdown-content p {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+#message-box{
+  width: 500px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  resize: both;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content p:hover {
-  background-color: #ddd;
+button{
+  margin: 30px;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #5d0cff;
+.img-text-wrapper {
+  position: absolute;
+  justify-content: right;
+  align-items: center;
+  text-align: center;
+  max-width: 48px;
+  max-height: 48px;
 }

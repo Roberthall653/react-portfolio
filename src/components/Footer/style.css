@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  bottom: 20px;
+  clear: both;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footer h2 {
+  font-size: 20px;
+}
+
+.footer img {
+  padding: 10px;
+  max-height: 72px;
+  max-width: 72px;
+}
